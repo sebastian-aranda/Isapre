@@ -1,0 +1,41 @@
+$first-color: #009688;
+
+.navbar-default{
+	
+	 
+    background-color: $first-color;
+	border-radius: 0px;
+	border-color: $first-color !important;
+	box-shadow: 2px 2px 2px #888888;
+}
+
+.navbar-brand{
+	height: 95px !important;
+	
+	img{
+		width: 160px;
+		padding: 10px;
+	}
+}
+.navbar-collapse{
+	ul{
+		margin-top: 40px !important;
+
+		li{
+			a{
+				font-weight: bold;
+				
+			}
+		}
+	}
+}
+
+main{
+	padding: 20px;
+	background-color: #F7F7F7;
+	form{
+		background-color: #CCE1FA;
+		padding: 50px;
+		 box-shadow: 2px 2px 2px #888888;
+	}
+}
