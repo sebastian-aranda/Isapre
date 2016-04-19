@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Formulario Isapres</title>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/bootstrap-datepicker.min.css">
+	<link rel="stylesheet" href="css/bootstrap-datepicker3.min.css">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+	<nav class="nav nav-bar">
+		<ul>
+			<li><a href="#home">HOME</a></li>
+			<li><a href="#informacion">INFORMACION</a></li>
+			<li><a href="#contacto">CONTACTO</a></li>
+			<!--<li><a href="#" class="date-nav-prev">PREV</a></li>
+			<li><a href="#" class="date-nav-next">NEXT</a></li>-->
+		</ul>
+	</nav>
+
+	<main class="container-fluid content-slide-wrapper">
+		<div class="content-slide">
+			<div class="content-slide-item active" id="home">
+				<h1>Titulo 1</h1>
+				<p>Contenido 1</p>
+			</div>
+			<div class="content-slide-item" id="informacion">
+				<h1>Titulo 2</h1>
+				<p>Contenido 2</p>
+			</div>
+
+			<div class="content-slide-item" id="contacto">
+				<h1>Titulo 3</h1>
+				<p>Contenido 3</p>
+			</div>
+		</div>
+	</main>
+	
+	<main class="container-fluid">
+		<div class="row" style="width: 480px; margin:auto;">
+			<form>
+			  <div class="form-group">
+			    <label for="nombre-completo">Nombre Completo:</label>
+			    <input type="text" class="form-control" id="nombre-completo" placeholder="Ingrese su nombre completo">
+			  </div>
+			  <div class="form-group">
+			    <label for="rut">Rut:</label>
+			    <input type="text" class="form-control" id="rut" placeholder="Ingrese su rut sin puntos ni guión">
+			  </div>
+			  <div class="form-group">
+			    <label for="correo">Correo Electrónico:</label>
+			    <input type="email" class="form-control" id="correo" placeholder="Ingrese su correo electrónico">
+			  </div>
+			  <div class="form-group">
+			    <label for="fecha-nacimiento">Fecha de Nacimiento:</label>
+			    <div class="input-group date">
+				    <input type="text" class="form-control" id="fecha-nacimiento">
+				    <div class="input-group-addon">
+				        <span class="glyphicon glyphicon-th"></span>
+				    </div>
+				</div>
+			  </div>
+			
+			  <div class="form-group">
+			  	  <div class="radio-inline">
+					<label><input type="radio" name="sexo" value="Masculino" checked>Masculino</label>
+				  </div>
+				  <div class="radio-inline">
+					<label><input type="radio" name="sexo" value="Femenino">Femenino</label>
+				  </div>	
+			  </div>
+			  
+			  <div class="form-group row">
+			  	<label class="col-md-4 form-control-static">Número de cargas:</label>
+			  	<div class="col-md-8">
+			  		<input type="number" class="form-control" id="numero-cargas" placeholder="0" min="0">	
+			  	</div>
+			  </div>
+			
+			  <div class="form-group">
+			  	<label for="fecha-nacimiento">Sexo y Edad de las cargas:</label>
+			  	<textarea class="form-control" id="cargas-detalle" rows="3"></textarea>
+			  </div>
+
+			  <div class="form-group">
+			    <label for="renta">Renta imponible:</label>
+				<div class="input-group">
+					<span class="input-group-addon">$</span>
+			    	<input type="text" class="form-control" id="renta" placeholder="Ingrese su renta imponible">	
+				</div>
+			  </div>
+
+			  <div class="form-group">
+			    <label for="comuna">Comuna:</label>
+			    <input type="text" class="form-control" id="comuna" placeholder="Ingrese su comuna">
+			  </div>
+
+			  <div class="form-group">
+			    <label for="telefono">Teléfono:</label>
+			    <div class="input-group">
+					<span class="input-group-addon">+562</span>
+			    	<input type="text" class="form-control" id="telefono" placeholder="Ingrese su número de teléfono" maxlength="7">	
+				</div>
+			  </div>
+
+			  <div class="form-group">
+			    <label for="celular">Celular:</label>
+			    <div class="input-group">
+					<span class="input-group-addon">+569</span>
+			    	<input type="text" class="form-control" id="celular" placeholder="Ingrese su número de celular" maxlength="8">	
+				</div>
+			  </div>
+
+			  <div class="form-group">
+			    <label for="isapre">Isapre Actual:</label>
+			    <select id="isapre" class="form-control">
+				  <option value="-1" selected>Seleccione su isapre actual</option>
+				  <option value="CONSALUD">CONSALUD</option>
+				  <option value="MASVIDA">MASVIDA</option>
+				  <option value="COLMENA">COLMENA</option>
+				  <option value="VIDATRES">VIDATRES</option>
+				  <option value="BANMEDICA">BANMEDICA</option>
+				  <option value="CRUZBLANCA">CRUZBLANCA</option>
+				  <option value="FERROSALUD">FERROSALUD</option>
+				  <option value="FONASA">FONASA</option>
+				  <option value="OTRA">OTRA</option>
+				</select>
+			  </div>
+
+			  <div class="form-group">
+			    <label for="cotizacion-actual">Cotización actual en salud:</label>
+			    <div class="input-group">
+					<span id="cotizacion-moneda-addon" class="input-group-addon">UF</span>
+			    	<input type="text" class="form-control" id="cotizacion-actual" placeholder="Ingrese su cotización actual" maxlength="8">
+				</div>
+				<div class="radio-inline">
+					<label><input type="radio" name="cotizacion-moneda" value="Masculino" checked>UF</label>
+			    </div>
+			    <div class="radio-inline">
+					<label><input type="radio" name="cotizacion-moneda" value="Femenino">Pesos</label>
+			    </div>
+			  </div>
+
+			  <div class="form-group">
+			  	<label class="control-label">Preferencias de Isapre:</label>
+			  	<div class="row">
+			  		<div class="col-md-4">
+			  			<div class="radio">
+						  <label><input type="radio" name="isapre-preferencia" id="isapre-preferencia" value="CONSALUD" checked>CONSALUD</label>
+						</div>
+						<div class="radio">
+						  <label><input type="radio" name="isapre-preferencia" id="isapre-preferencia" value="MASVIDA">MASVIDA</label>
+						</div>
+						<div class="radio">
+						  <label><input type="radio" name="isapre-preferencia" id="isapre-preferencia" value="COLMENA">COLMENA</label>
+						</div>
+			  		</div>
+			  		<div class="col-md-4">
+			  			<div class="radio">
+						  <label><input type="radio" name="isapre-preferencia" id="isapre-preferencia" value="VIDATRES">VIDATRES</label>
+						</div>
+						<div class="radio">
+						  <label><input type="radio" name="isapre-preferencia" id="isapre-preferencia" value="BANMEDICA">BANMEDICA</label>
+						</div>
+						<div class="radio">
+						  <label><input type="radio" name="isapre-preferencia" id="isapre-preferencia" value="CRUZBLANCA">CRUZBLANCA</label>
+						</div>
+			  		</div>
+			  		<div class="col-md-4">
+			  			<div class="radio">
+						  <label><input type="radio" name="isapre-preferencia" id="isapre-preferencia" value="FERROSALUD">FERROSALUD</label>
+						</div>
+						<div class="radio">
+						  <label><input type="radio" name="isapre-preferencia" id="isapre-preferencia" value="FONASA">FONASA</label>
+						</div>
+						<div class="radio">
+						  <label><input type="radio" name="isapre-preferencia" id="isapre-preferencia" value="OTRA">OTRA</label>
+						</div>			  			
+			  		</div>
+			  	</div>
+			  </div>
+
+			  <div class="form-group">
+			  	<label class="control-label">Preferencias de Clínica:</label>
+			  	<div class="row">
+			  		<div class="col-md-4">
+			  			<div class="radio">
+						  <label><input type="radio" name="clinica-preferencia" id="clinica-preferencia" value="ALEMANA" checked>ALEMANA</label>
+						</div>
+						<div class="radio">
+						  <label><input type="radio" name="clinica-preferencia" id="clinica-preferencia" value="BICENTENARIO">BICENTENARIO</label>
+						</div>
+						<div class="radio">
+						  <label><input type="radio" name="clinica-preferencia" id="clinica-preferencia" value="TABANCURA">TABANCURA</label>
+						</div>
+			  		</div>
+			  		<div class="col-md-4">
+			  			<div class="radio">
+						  <label><input type="radio" name="clinica-preferencia" id="clinica-preferencia" value="SANTA MARIA">SANTA MARIA</label>
+						</div>
+						<div class="radio">
+						  <label><input type="radio" name="clinica-preferencia" id="clinica-preferencia" value="U. CATOLICA">U. CATOLICA</label>
+						</div>
+						<div class="radio">
+						  <label><input type="radio" name="clinica-preferencia" id="clinica-preferencia" value="INDISA">INDISA</label>
+						</div>
+			  		</div>
+			  		<div class="col-md-4">
+			  			<div class="radio">
+						  <label><input type="radio" name="clinica-preferencia" id="clinica-preferencia" value="LAS CONDES">LAS CONDES</label>
+						</div>
+						<div class="radio">
+						  <label><input type="radio" name="clinica-preferencia" id="clinica-preferencia" value="AVANSALUD">AVANSALUD</label>
+						</div>
+						<div class="radio">
+						  <label><input type="radio" name="clinica-preferencia" id="clinica-preferencia" value="LAS LILAS">LAS LILAS</label>
+						</div>			  			
+			  		</div>
+
+			  		<!-- TODO: AGREGAR CLINICAS QUE FALTAN -->
+			  	</div>
+			  </div>
+
+			  <div class="form-group">
+			  	<label class="control-label">Preferencias de Beneficios:</label>
+			  	<div class="row">
+			  		<div class="col-md-6">
+			  			<div class="radio">
+						  <label><input type="radio" name="beneficio-preferencia" id="beneficio-preferencia" value="SEGURO PARA VIAJES" checked>SEGURO PARA VIAJES</label>
+						</div>
+						<div class="radio">
+						  <label><input type="radio" name="beneficio-preferencia" id="beneficio-preferencia" value="SEGURO CESANTIA">SEGURO CESANTIA</label>
+						</div>
+						<div class="radio">
+						  <label><input type="radio" name="beneficio-preferencia" id="beneficio-preferencia" value="MEDICAMENTOS">MEDICAMENTOS</label>
+						</div>
+			  		</div>
+			  		<div class="col-md-6">
+			  			<div class="radio">
+						  <label><input type="radio" name="beneficio-preferencia" id="beneficio-preferencia" value="COBERTURA DENTAL">COBERTURA DENTAL</label>
+						</div>
+						<div class="radio">
+						  <label><input type="radio" name="beneficio-preferencia" id="beneficio-preferencia" value="SEGURO ACCIDENTES">SEGURO ACCIDENTES</label>
+						</div>
+						<div class="radio">
+						  <label><input type="radio" name="beneficio-preferencia" id="beneficio-preferencia" value="OTRO">OTRO</label>
+						</div>
+			  		</div>
+			  	</div>
+			  </div>
+			</form>
+		</div>
+	</main>
+	<script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	<script src="js/bootstrap-datepicker.min.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>
