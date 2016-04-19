@@ -9,9 +9,10 @@
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/site.css">
 	<link rel="stylesheet" href="css/navbar.css">
+	<link rel="stylesheet" href="css/style.css">
 
 </head>
-<body>
+<body style="background-color: #F7F7F7;">
 	<nav class="navbar navbar-default no-margin">
 		<div class="container-fluid">
 			<div class="navbar-header">
@@ -21,51 +22,26 @@
 			        <span class="icon-bar"></span>
 			        <span class="icon-bar"></span>
 		      	</button>
-		      	<a class="navbar-brand" href="#">NOMBRE EMPRESA</a>
+		      	<a class="navbar-brand" href="#"><img src="img/logow.png"></a>
 		    </div>
 
 		    <div class="collapse navbar-collapse" id="navbar-collapse">
-				<ul class="nav navbar-nav">
-			        <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
-			        <li><a href="#">Link</a></li>
-			        <li class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-			          	<ul class="dropdown-menu">
-				            <li><a href="#">Action</a></li>
-				            <li><a href="#">Another action</a></li>
-				            <li><a href="#">Something else here</a></li>
-				            <li role="separator" class="divider"></li>
-				            <li><a href="#">Separated link</a></li>
-				            <li role="separator" class="divider"></li>
-				            <li><a href="#">One more separated link</a></li>
-			          	</ul>
-			        </li>
-				</ul>
 				
-				<form class="navbar-form navbar-left" role="search">
-					<div class="form-group"><input type="text" class="form-control" placeholder="Search"></div>
-		       		<button type="submit" class="btn btn-default">Submit</button>
-				</form>
+				
+				
 
 				<ul class="nav navbar-nav navbar-right">
-		        	<li><a href="#">Link</a></li>
-					<li class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-						<ul class="dropdown-menu">
-							<li><a href="#">Action</a></li>
-							<li><a href="#">Another action</a></li>
-							<li><a href="#">Something else here</a></li>
-							<li role="separator" class="divider"></li>
-							<li><a href="#">Separated link</a></li>
-						</ul>
-					</li>
+		        	<li><a href="#">HOME</a></li>
+		        	<li><a href="#">INFORMACIÓN</a></li>
+		        	<li><a href="#">CONTACTO</a></li>
+					
 				</ul>
 			</div>
 
 		</div>
 	</nav>
 
-	<main class="container-fluid no-padding">
+	<!--<main class="container-fluid no-padding">
 		<div id="carousel" class="carousel slide" data-ride="carousel">
 			<ol class="carousel-indicators">
 				<li data-target="#carousel" data-slide-to="0" class="active"></li>
@@ -119,12 +95,222 @@
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae commodi, sit consequuntur quaerat itaque cupiditate vero quo quibusdam libero, neque rerum nesciunt eius molestiae velit repellendus! Iste, quo cupiditate reprehenderit.</p>
 			</div>
 		</div>
+	</main>-->
+	<main class="container-fluid">
+		<div class="row" style="">
+			<form class="col-md-5 col-md-offset-1">
+			  <div class="form-group">
+			    <label for="nombre-completo">Nombre Completo:</label>
+			    <input type="text" class="form-control" id="nombre-completo" placeholder="Ingrese su nombre completo">
+			  </div>
+			  <div class="form-group">
+			    <label for="rut">Rut:</label>
+			    <input type="text" class="form-control" id="rut" placeholder="Ingrese su rut sin puntos ni guión">
+			  </div>
+			  <div class="form-group">
+			    <label for="correo">Correo Electrónico:</label>
+			    <input type="email" class="form-control" id="correo" placeholder="Ingrese su correo electrónico">
+			  </div>
+			  <div class="form-group">
+			    <label for="fecha-nacimiento">Fecha de Nacimiento:</label>
+			    <input type="text" class="form-control" id="fecha-nacimiento" placeholder="Seleccione su fecha de nacimiento">
+			  </div>
+			
+			  <div class="form-group">
+			  	  <div class="radio-inline">
+					<label><input type="radio" name="sexo" value="Masculino" checked>Masculino</label>
+				  </div>
+				  <div class="radio-inline">
+					<label><input type="radio" name="sexo" value="Femenino">Femenino</label>
+				  </div>	
+			  </div>
+			  
+			  <div class="form-group row">
+			  	<label class="col-md-4 form-control-static">Número de cargas:</label>
+			  	<div class="col-md-8">
+			  		<input type="number" class="form-control" id="numero-cargas" placeholder="0" min="0">	
+			  	</div>
+			  </div>
+			
+			  <div class="form-group">
+			  	<label for="fecha-nacimiento">Sexo y Edad de las cargas:</label>
+			  	<textarea class="form-control" id="cargas-detalle" rows="3"></textarea>
+			  </div>
+
+			  <div class="form-group">
+			    <label for="renta">Renta imponible:</label>
+				<div class="input-group">
+					<span class="input-group-addon">$</span>
+			    	<input type="text" class="form-control" id="renta" placeholder="Ingrese su renta imponible">	
+				</div>
+			  </div>
+
+			  <div class="form-group">
+			    <label for="comuna">Comuna:</label>
+			    <input type="text" class="form-control" id="comuna" placeholder="Ingrese su comuna">
+			  </div>
+
+			  <div class="form-group">
+			    <label for="telefono">Teléfono:</label>
+			    <div class="input-group">
+					<span class="input-group-addon">+562</span>
+			    	<input type="text" class="form-control" id="telefono" placeholder="Ingrese su número de teléfono" maxlength="7">	
+				</div>
+			  </div>
+
+			  <div class="form-group">
+			    <label for="celular">Celular:</label>
+			    <div class="input-group">
+					<span class="input-group-addon">+569</span>
+			    	<input type="text" class="form-control" id="celular" placeholder="Ingrese su número de celular" maxlength="8">	
+				</div>
+			  </div>
+
+			  <div class="form-group">
+			    <label for="isapre">Isapre Actual:</label>
+			    <select id="isapre" class="form-control">
+				  <option value="-1" selected>Seleccione su isapre actual</option>
+				  <option value="CONSALUD">CONSALUD</option>
+				  <option value="MASVIDA">MASVIDA</option>
+				  <option value="COLMENA">COLMENA</option>
+				  <option value="VIDATRES">VIDATRES</option>
+				  <option value="BANMEDICA">BANMEDICA</option>
+				  <option value="CRUZBLANCA">CRUZBLANCA</option>
+				  <option value="FERROSALUD">FERROSALUD</option>
+				  <option value="FONASA">FONASA</option>
+				  <option value="OTRA">OTRA</option>
+				</select>
+			  </div>
+
+			  <div class="form-group">
+			    <label for="cotizacion-actual">Cotización actual en salud:</label>
+			    <div class="input-group">
+					<span id="cotizacion-moneda-addon" class="input-group-addon">UF</span>
+			    	<input type="text" class="form-control" id="cotizacion-actual" placeholder="Ingrese su cotización actual" maxlength="8">
+				</div>
+				<div class="radio-inline">
+					<label><input type="radio" name="cotizacion-moneda" value="Masculino" checked>UF</label>
+			    </div>
+			    <div class="radio-inline">
+					<label><input type="radio" name="cotizacion-moneda" value="Femenino">Pesos</label>
+			    </div>
+			  </div>
+
+			  <div class="form-group">
+			  	<label class="control-label">Preferencias de Isapre:</label>
+			  	<div class="row">
+			  		<div class="col-md-4">
+			  			<div class="radio">
+						  <label><input type="radio" name="isapre-preferencia" id="isapre-preferencia" value="CONSALUD" checked>CONSALUD</label>
+						</div>
+						<div class="radio">
+						  <label><input type="radio" name="isapre-preferencia" id="isapre-preferencia" value="MASVIDA">MASVIDA</label>
+						</div>
+						<div class="radio">
+						  <label><input type="radio" name="isapre-preferencia" id="isapre-preferencia" value="COLMENA">COLMENA</label>
+						</div>
+			  		</div>
+			  		<div class="col-md-4">
+			  			<div class="radio">
+						  <label><input type="radio" name="isapre-preferencia" id="isapre-preferencia" value="VIDATRES">VIDATRES</label>
+						</div>
+						<div class="radio">
+						  <label><input type="radio" name="isapre-preferencia" id="isapre-preferencia" value="BANMEDICA">BANMEDICA</label>
+						</div>
+						<div class="radio">
+						  <label><input type="radio" name="isapre-preferencia" id="isapre-preferencia" value="CRUZBLANCA">CRUZBLANCA</label>
+						</div>
+			  		</div>
+			  		<div class="col-md-4">
+			  			<div class="radio">
+						  <label><input type="radio" name="isapre-preferencia" id="isapre-preferencia" value="FERROSALUD">FERROSALUD</label>
+						</div>
+						<div class="radio">
+						  <label><input type="radio" name="isapre-preferencia" id="isapre-preferencia" value="FONASA">FONASA</label>
+						</div>
+						<div class="radio">
+						  <label><input type="radio" name="isapre-preferencia" id="isapre-preferencia" value="OTRA">OTRA</label>
+						</div>			  			
+			  		</div>
+			  	</div>
+			  </div>
+
+			  <div class="form-group">
+			  	<label class="control-label">Preferencias de Clínica:</label>
+			  	<div class="row">
+			  		<div class="col-md-4">
+			  			<div class="radio">
+						  <label><input type="radio" name="clinica-preferencia" id="clinica-preferencia" value="ALEMANA" checked>ALEMANA</label>
+						</div>
+						<div class="radio">
+						  <label><input type="radio" name="clinica-preferencia" id="clinica-preferencia" value="BICENTENARIO">BICENTENARIO</label>
+						</div>
+						<div class="radio">
+						  <label><input type="radio" name="clinica-preferencia" id="clinica-preferencia" value="TABANCURA">TABANCURA</label>
+						</div>
+			  		</div>
+			  		<div class="col-md-4">
+			  			<div class="radio">
+						  <label><input type="radio" name="clinica-preferencia" id="clinica-preferencia" value="SANTA MARIA">SANTA MARIA</label>
+						</div>
+						<div class="radio">
+						  <label><input type="radio" name="clinica-preferencia" id="clinica-preferencia" value="U. CATOLICA">U. CATOLICA</label>
+						</div>
+						<div class="radio">
+						  <label><input type="radio" name="clinica-preferencia" id="clinica-preferencia" value="INDISA">INDISA</label>
+						</div>
+			  		</div>
+			  		<div class="col-md-4">
+			  			<div class="radio">
+						  <label><input type="radio" name="clinica-preferencia" id="clinica-preferencia" value="LAS CONDES">LAS CONDES</label>
+						</div>
+						<div class="radio">
+						  <label><input type="radio" name="clinica-preferencia" id="clinica-preferencia" value="AVANSALUD">AVANSALUD</label>
+						</div>
+						<div class="radio">
+						  <label><input type="radio" name="clinica-preferencia" id="clinica-preferencia" value="LAS LILAS">LAS LILAS</label>
+						</div>			  			
+			  		</div>
+
+			  		<!-- TODO: AGREGAR CLINICAS QUE FALTAN -->
+			  	</div>
+			  </div>
+
+			  <div class="form-group">
+			  	<label class="control-label">Preferencias de Beneficios:</label>
+			  	<div class="row">
+			  		<div class="col-md-6">
+			  			<div class="radio">
+						  <label><input type="radio" name="beneficio-preferencia" id="beneficio-preferencia" value="SEGURO PARA VIAJES" checked>SEGURO PARA VIAJES</label>
+						</div>
+						<div class="radio">
+						  <label><input type="radio" name="beneficio-preferencia" id="beneficio-preferencia" value="SEGURO CESANTIA">SEGURO CESANTIA</label>
+						</div>
+						<div class="radio">
+						  <label><input type="radio" name="beneficio-preferencia" id="beneficio-preferencia" value="MEDICAMENTOS">MEDICAMENTOS</label>
+						</div>
+			  		</div>
+			  		<div class="col-md-6">
+			  			<div class="radio">
+						  <label><input type="radio" name="beneficio-preferencia" id="beneficio-preferencia" value="COBERTURA DENTAL">COBERTURA DENTAL</label>
+						</div>
+						<div class="radio">
+						  <label><input type="radio" name="beneficio-preferencia" id="beneficio-preferencia" value="SEGURO ACCIDENTES">SEGURO ACCIDENTES</label>
+						</div>
+						<div class="radio">
+						  <label><input type="radio" name="beneficio-preferencia" id="beneficio-preferencia" value="OTRO">OTRO</label>
+						</div>
+			  		</div>
+			  	</div>
+			  </div>
+			</form>
+		</div>
 	</main>
 
 	<footer class="container-fluid no-padding">
 		<div class="row content">
 			<div class="col-md-4">
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae commodi, sit consequuntur quaerat itaque cupiditate vero quo quibusdam libero, neque rerum nesciunt eius molestiae velit repellendus! Iste, quo cupiditate reprehenderit.</p>
+				<p>Empresa que basa sus servicios en satisfacer las múltiples necesidades de nuestros potenciales clientes, orientándolos con los diferentes planes de salud e isapres que actualmente existen..</p>
 			</div>
 			
 			<div class="col-md-4">
@@ -136,6 +322,7 @@
 			</div>
 		</div>
 	</footer>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
