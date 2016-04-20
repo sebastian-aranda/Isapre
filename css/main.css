@@ -14,7 +14,7 @@
 }
 
 #home{
-	background-color: red;
+	
 }
 
 #informacion{
@@ -22,8 +22,9 @@
 }
 
 #contacto{
-	color: white;
-	background-color: #6666DD;
+	color: #009688;
+	background-color: #F7F7F7;
+
 }
 
 .content-slide-item{
@@ -31,6 +32,7 @@
 	height: 100%;
 	width: 33.333%;
 	float: left;
+	
 }
 
 .contact-form{

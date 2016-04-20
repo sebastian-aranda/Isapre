@@ -1,5 +1,9 @@
+* {
+  font-family: 'Open Sans', sans-serif;
+}
+
 .navbar-default {
-  background-color: #009688;
+  background-color: #009688 !important;
   border-radius: 0px;
   border-color: #009688 !important;
   box-shadow: 2px 2px 2px #888888;
@@ -18,8 +22,14 @@
   margin-top: 40px !important;
 }
 
-.navbar-collapse ul li a {
+.navbar-collapse ul li:hover {
+  box-shadow: 0px 2px 2px #065444;
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: white !important;
   font-weight: bold;
+  font-size: 15px;
 }
 
 main {
@@ -27,8 +37,41 @@ main {
   background-color: #F7F7F7;
 }
 
+main .cotizador {
+  height: 800px;
+}
+
+main .form-row {
+  border: 1px dashed #CACACA;
+  color: #009688 !important;
+  font-weight: bold;
+  font-size: 16px;
+}
+
 main form {
-  background-color: #CCE1FA;
+  background-color: white;
   padding: 50px;
-  box-shadow: 2px 2px 2px #888888;
+}
+
+.content-slide-item h1 {
+  margin-left: 70px;
+}
+
+.content-slide-item p {
+  margin-left: 70px;
+}
+
+footer div figure {
+  text-align: center;
+}
+
+footer div figure img {
+  width: 280px;
+}
+
+footer div span {
+  color: white;
+  font-size: 30px !important;
+  font-weight: bold;
+  margin-right: 5px;
 }

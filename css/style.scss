@@ -1,12 +1,16 @@
 $first-color: #009688;
+*{
+	font-family: 'Open Sans', sans-serif;
+}
 
 .navbar-default{
 	
 	 
-    background-color: $first-color;
+    background-color: #009688 !important;
 	border-radius: 0px;
 	border-color: $first-color !important;
 	box-shadow: 2px 2px 2px #888888;
+
 }
 
 .navbar-brand{
@@ -22,20 +26,66 @@ $first-color: #009688;
 		margin-top: 40px !important;
 
 		li{
+
 			a{
-				font-weight: bold;
+				
 				
 			}
 		}
+		li:hover{
+			box-shadow: 0px 2px 2px #065444;
+		}
 	}
 }
-
+.navbar-default .navbar-nav>li>a{
+	color: white !important;
+	font-weight: bold;
+	font-size: 15px;
+}
 main{
+	.cotizador{
+		height: 800px;
+	}
+	.form-row{
+
+		border: 1px dashed #CACACA;
+		color: #009688 !important;
+		font-weight: bold;
+		font-size: 16px;
+
+	}
 	padding: 20px;
 	background-color: #F7F7F7;
 	form{
-		background-color: #CCE1FA;
+		background-color: white;
 		padding: 50px;
-		 box-shadow: 2px 2px 2px #888888;
+		//box-shadow: 2px 2px 2px #888888;
+		
+	}
+}
+.content-slide-item{
+	h1{
+		margin-left: 70px;
+	}
+	p{
+		margin-left: 70px;
+	}
+}
+
+footer{
+	div{
+		
+		figure{
+			text-align: center;
+			img{
+				width: 280px;
+			}
+		}
+		span{
+			color: white;
+			font-size: 30px !important;
+			font-weight: bold;
+			margin-right: 5px;
+		}
 	}
 }
