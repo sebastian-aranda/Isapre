@@ -1,9 +1,8 @@
 .content-slide-wrapper{
 	position: relative;
-	height: 540px;
+	height: 840px;
 	width: 100%;
-	overflow: hidden;
-	overflow-y: scroll;
+	/*overflow: hidden;*/
 	padding: 0;
 }
 
@@ -41,6 +40,7 @@
 	height: 100%;
 	margin: 0;
 	padding-top:24px;
+	padding-left: 40px;
 }
 
 .contact-step.active{
@@ -49,4 +49,5 @@
 
 .contact-step{
 	position: absolute;
+	padding: 0 !important; 
 }
