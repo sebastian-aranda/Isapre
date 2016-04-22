@@ -71,6 +71,21 @@ main form {
   padding-top: 24px;
 }
 
+main .item2-box {
+  color: #009688 !important;
+  font-size: 16px;
+  margin: 50px 0px 0px 0px;
+}
+
+main .item2-box h3 {
+  padding: 10px;
+  background-color: #009688;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  box-shadow: 0px 2px 2px #065444;
+}
+
 /*
 .content-slide-item{
 	h1{
