@@ -1,34 +1,30 @@
 * {
-  box-sizing: border-box;
-}
+  box-sizing: border-box; }
 
 body {
-  margin: 40px 0;
-  background-color: #ffffff;
-}
+  background-color: #ffffff; }
 
 main {
-  background-color: #ffffff;
-}
+  background-color: #ffffff; }
 
 .item img {
   display: block;
-  margin: auto;
-}
+  margin: auto; }
 
-.content {
-  margin: 40px;
-}
+/*
+.content{
+	margin: 40px;
 
-.content > * {
-  border-right: 2px solid black;
-  padding-left: 24px;
-}
+	> *{
+		border-right: 2px solid black;
+		padding-left: 24px;
+	}
 
-.content > :last-child {
-  border-right: none;
+	> :last-child{
+		border-right: none;
+	}
 }
-
+*/
 /*.content > *{
 	border-right: 2px solid black;
 	padding-left: 24px;
@@ -41,31 +37,25 @@ footer {
   background-color: #222;
   color: white;
   border-bottom-right-radius: 8px;
-  border-bottom-left-radius: 8px;
-}
-
-footer .content {
-  margin: 40px;
-}
-
-footer .content > * {
-  border-right: 2px solid white;
-  padding-left: 24px;
-}
-
-footer .content > :last-child {
-  border-right: none;
-}
+  border-bottom-left-radius: 8px; }
+  footer .content {
+    margin: 40px; }
+    @media (min-width: 992px) {
+      footer .content > * {
+        border-right: 2px solid white;
+        padding-left: 24px; }
+      footer .content > :last-child {
+        border-right: none; } }
 
 .space-holder {
   height: 980px;
-  width: 100%;
-}
+  width: 100%; }
 
+/* Helper Classes */
 .no-padding {
-  padding: 0;
-}
+  padding: 0; }
 
 .no-margin {
-  margin: 0;
-}
+  margin: 0; }
+
+/*# sourceMappingURL=site.css.map */

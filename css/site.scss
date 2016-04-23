@@ -8,7 +8,7 @@ $secondary_color: #000;
 }
 
 body{
-	margin: 40px 0;
+	//margin: 40px 0;
 	background-color: $bg_color;
 }
 
@@ -21,6 +21,7 @@ main{
 	margin: auto;
 }
 
+/*
 .content{
 	margin: 40px;
 
@@ -33,6 +34,7 @@ main{
 		border-right: none;
 	}
 }
+*/
 
 /*.content > *{
 	border-right: 2px solid black;
@@ -51,14 +53,16 @@ footer{
 
 	.content{
 		margin: 40px;
+		
+		@media(min-width: 992px){
+			> *{
+				border-right: 2px solid white;
+				padding-left: 24px;
+			}
 
-		> *{
-			border-right: 2px solid white;
-			padding-left: 24px;
-		}
-
-		> :last-child{
-			border-right: none;
+			> :last-child{
+				border-right: none;
+			}
 		}
 	}
 }
@@ -67,6 +71,8 @@ footer{
 	height: 980px;
 	width: 100%;
 }
+
+/* Helper Classes */
 
 .no-padding{
 	padding:0;

@@ -1,31 +1,4 @@
-$('.input-group.date').datepicker({
-    format: "dd/mm/yyyy",
-    weekStart: 0,
-    startView: 2,
-    clearBtn: true,
-    language: "es",
-    autoclose: true
-});
-
-/*
-$(function(){
-	var active_pos = $('.active').index();
-	$('a').on("click", function(e){
-		e.preventDefault();
-		var target = $(this).attr('href').slice(1);
-		$('.content-slide-item').each(function(){
-			if ($(this).attr('id') == target){
-				$(this).animate({width: '100%'});
-				$(this).addClass('active');
-			}
-			else{
-				$(this).animate({width: '0'});
-				$(this).removeClass('active');
-			}
-		});
-	});
-});*/
-
+//SLIDER
 $(function(){
 	$('a').on("click", function(e){
 		e.preventDefault();
@@ -92,10 +65,19 @@ $(function(){
 	});
 });
 
+//DATEPICKER
+$('.input-group.date').datepicker({
+    format: "dd/mm/yyyy",
+    weekStart: 0,
+    startView: 2,
+    clearBtn: true,
+    language: "es",
+    autoclose: true
+});
 
-/*
-$(window).on('hashchange',function(){
-	var active_pos = $('.active').index();
-	alert(active_pos);
-	//$('.content-slide-item').each();    
-});*/
+//COIN SELECTION
+$(function(){
+	$('input[name="cotizacion-moneda"]').change(function(){
+		$('#cotizacion-moneda-addon').text(this.value);
+	});
+});
