@@ -62,7 +62,7 @@ function sendFormCotizacion(){
 	if (data.rut == ""){
 		$('#rut').focus();
 		proceed = false;
-		error = "Debe ingresar su rut sin puntos ni guión";
+		error = "Debe ingresar su rut sin puntos y con guión";
 	}
 
 	if (data.nombreCompleto == ""){
@@ -81,4 +81,52 @@ function sendFormCotizacion(){
 		}, "json");
 	}
 
+}
+
+function sendFormContacto(){
+	var data = {
+		"nombreCompleto": $('#contacto-nombre-completo').val(),
+		"rut": $('#contacto-rut').val(),
+		"correo": $('#contacto-correo').val(),
+		"fechaNacimiento": $('#contacto-fecha-nacimiento').val(),
+		"sexo": $('input[name=contacto-sexo]:checked').val()
+	}
+
+	var proceed = true;
+	var error = "sin errores";
+
+	if (data.fechaNacimiento == ""){
+		$('#contacto-fecha-nacimiento').focus();
+		proceed = false;
+		error = "Debe ingresar su fecha de nacimiento";
+	}
+
+	if (data.correo == ""){
+		$('#contacto-correo').focus();
+		proceed = false;
+		error = "Debe ingresar su correo electrónico"
+	}
+
+	if (data.rut == ""){
+		$('#contacto-rut').focus();
+		proceed = false;
+		error = "Debe ingresar su rut sin puntos y con guión";
+	}
+
+	if (data.nombreCompleto == ""){
+		$('#contacto-nombre-completo').focus();
+		proceed = false;
+		error = "Debe ingresar su nombre completo";
+	}
+
+	//console.log(data);
+
+	
+	if (!proceed)
+		alert(error);
+	else{
+		$.post("./send_contacto.php", data, function(response){
+			alert(response.msg);
+		}, "json");
+	}*/
 }

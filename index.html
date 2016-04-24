@@ -312,19 +312,19 @@
 					<div class="row">
 						<form class="contact-form">
 							<div class="form-group">
-								<label for="nombre-completo">Nombre Completo:</label>
+								<label for="contacto-nombre-completo">Nombre Completo:</label>
 								<input type="text" class="form-control" id="contacto-nombre-completo" placeholder="Ingrese su nombre completo">
 							</div>
 							<div class="form-group">
-								<label for="rut">Rut:</label>
+								<label for="contacto-rut">Rut:</label>
 								<input type="text" class="form-control" id="contacto-rut" placeholder="Ingrese su rut sin puntos ni guión">
 							</div>
 							<div class="form-group">
-								<label for="correo">Correo Electrónico:</label>
+								<label for="contacto-correo">Correo Electrónico:</label>
 								<input type="email" class="form-control" id="contacto-correo" placeholder="Ingrese su correo electrónico">
 							</div>
 							<div class="form-group">
-								<label for="fecha-nacimiento">Fecha de Nacimiento:</label>
+								<label for="contacto-fecha-nacimiento">Fecha de Nacimiento:</label>
 								<div class="input-group date">
 									<input type="text" class="form-control" id="contacto-fecha-nacimiento">
 									<div class="input-group-addon"><span class="glyphicon glyphicon-th"></span></div>
@@ -339,7 +339,7 @@
 								</div>	
 							</div>
 						</form>
-						<button id="enviar-contacto" type="button" class="btn btn-success center-block">Enviar Contacto</button>
+						<button onclick="sendFormContacto();" id="enviar-contacto" type="button" class="btn btn-success center-block">Enviar Contacto</button>
 					</div>
 				</div>	
 			</div>
@@ -371,7 +371,7 @@
 	<script src="bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
 	<script src="js/bootstrap-datepicker.min.js"></script>
 	<script src="js/main.js"></script>
-	<script src="js/form-cotizacion.js"></script>
+	<script src="js/forms.js"></script>
 
 </body>
 </html>
