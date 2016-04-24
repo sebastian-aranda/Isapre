@@ -122,10 +122,9 @@ function sendFormCotizacion(){
 	
 	console.log(data);
 
-	/*
 	$.post("./send_cotizacion.php", data, function(response){
 		alert(response.msg);
-	}, "json");*/
+	}, "json");
 }
 
 function sendFormContacto(){
