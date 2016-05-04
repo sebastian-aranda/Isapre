@@ -1,8 +1,7 @@
 <?php
 if($_POST)
 {
-    //$to_Email       = "ventas@dgequipments.com"; //Replace with recipient email address
-    $to_Email       = "aranda.sebastian@gmail.com"; //Replace with recipient email address
+    $to_Email       = "contacto@isaprescotiza.cl"; //Replace with recipient email address
     $subject        = '[Cotizacion] Isapres'; //Subject line for emails
    
 
